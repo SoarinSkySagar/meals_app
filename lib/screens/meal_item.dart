@@ -14,24 +14,29 @@ class MealItemInfo extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final favMeals = ref.watch(favMealsProvider);
+
+    bool isFav = favMeals.contains(meal);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(meal.title),
         actions: [
           IconButton(
-              onPressed: () {
-                final wasAdded =
-                    ref.read(favMealsProvider.notifier).toggleFavorite(meal);
-                ScaffoldMessenger.of(context).clearSnackBars();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(wasAdded
-                        ? 'Meal added to Favorites!'
-                        : 'Meal removed from Favorites!'),
-                  ),
-                );
-              },
-              icon: Icon(Icons.star_border))
+            onPressed: () {
+              final wasAdded =
+                  ref.read(favMealsProvider.notifier).toggleFavorite(meal);
+              ScaffoldMessenger.of(context).clearSnackBars();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(wasAdded
+                      ? 'Meal added to Favorites!'
+                      : 'Meal removed from Favorites!'),
+                ),
+              );
+            },
+            icon: Icon(isFav ? Icons.star : Icons.star_border),
+          )
         ],
       ),
       body: SingleChildScrollView(
