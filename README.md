@@ -1,6 +1,12 @@
 
 ![meals app](https://github.com/michaelgikunda/meals_app/assets/125220330/2ae10d1f-78b5-42f1-bc33-57f974ca9ae2)
 
+![GitHub stars](https://img.shields.io/github/stars/SoarinSkySagar/meals_app?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/SoarinSkySagar/meals_app?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/SoarinSkySagar/meals_app?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/SoarinSkySagar/meals_app?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/SoarinSkySagar/meals_app?style=flat-square)
+![GitHub](https://img.shields.io/github/license/SoarinSkySagar/meals_app?style=flat-square)
 
 ## Table of Contents
 
